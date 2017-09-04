@@ -10,6 +10,24 @@ import UIKit
 
 class CreateSoundViewController: UIViewController {
 
+    
+    @IBOutlet weak var RecordButton: UIButton!
+    @IBOutlet weak var PlayButton: UIButton!
+    @IBOutlet weak var TitleBox: UITextField!
+    @IBOutlet weak var AddButton: UIButton!
+    
+    @IBAction func RecordWasTapped(_ sender: Any) {
+    }
+    
+    
+    @IBAction func PlayWasTapped(_ sender: Any) {
+    }
+    
+    
+    @IBAction func AddWasTapped(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

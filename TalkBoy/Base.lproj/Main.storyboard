@@ -58,10 +58,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-IK-Xqh">
                                 <rect key="frame" x="15" y="64" width="345" height="30"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="RecordWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="UZB-6f-HhL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEy-No-RTa">
                                 <rect key="frame" x="15" y="102" width="345" height="30"/>
                                 <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="PlayWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="XEo-7a-fRf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGu-ve-6OC">
                                 <rect key="frame" x="15" y="123" width="345" height="30"/>
@@ -72,6 +78,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-lK-Fxb">
                                 <rect key="frame" x="15" y="161" width="345" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="AddWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="AMC-th-KAh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,6 +100,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qvu-TA-QHJ"/>
                     </view>
+                    <connections>
+                        <outlet property="AddButton" destination="RjC-lK-Fxb" id="nOh-fd-Ryz"/>
+                        <outlet property="PlayButton" destination="aEy-No-RTa" id="bQ6-2K-yJO"/>
+                        <outlet property="RecordButton" destination="Hhm-IK-Xqh" id="v14-G2-vOZ"/>
+                        <outlet property="TitleBox" destination="DGu-ve-6OC" id="YRa-me-cFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xga-wQ-b6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
