@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D8B8B3741F5DB06C00373140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B3731F5DB06C00373140 /* AppDelegate.swift */; };
-		D8B8B3761F5DB06C00373140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B3751F5DB06C00373140 /* ViewController.swift */; };
 		D8B8B3791F5DB06C00373140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8B3771F5DB06C00373140 /* Main.storyboard */; };
 		D8B8B37C1F5DB06C00373140 /* TalkBoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B37A1F5DB06C00373140 /* TalkBoy.xcdatamodeld */; };
 		D8B8B37E1F5DB06C00373140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B8B37D1F5DB06C00373140 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		D8B8B3701F5DB06C00373140 /* TalkBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B8B3731F5DB06C00373140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8B8B3751F5DB06C00373140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8B8B3781F5DB06C00373140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8B8B37B1F5DB06C00373140 /* TalkBoy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TalkBoy.xcdatamodel; sourceTree = "<group>"; };
 		D8B8B37D1F5DB06C00373140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				D8B8B3731F5DB06C00373140 /* AppDelegate.swift */,
-				D8B8B3751F5DB06C00373140 /* ViewController.swift */,
 				D8B8B3771F5DB06C00373140 /* Main.storyboard */,
 				D8B8B37D1F5DB06C00373140 /* Assets.xcassets */,
 				D8B8B37F1F5DB06C00373140 /* LaunchScreen.storyboard */,
@@ -139,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B8B3761F5DB06C00373140 /* ViewController.swift in Sources */,
 				D8B8B37C1F5DB06C00373140 /* TalkBoy.xcdatamodeld in Sources */,
 				D8B8B3741F5DB06C00373140 /* AppDelegate.swift in Sources */,
 			);
