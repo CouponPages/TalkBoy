@@ -14,7 +14,7 @@
         <!--TalkBoy-->
         <scene sceneID="fdu-hw-IsK">
             <objects>
-                <tableViewController id="Ghd-9A-I8X" sceneMemberID="viewController">
+                <tableViewController id="Ghd-9A-I8X" customClass="SoundsTableViewTableViewController" customModule="TalkBoy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zcc-WK-lnC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="521" y="278"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Sound View Controller-->
         <scene sceneID="8o4-yO-kW8">
             <objects>
-                <viewController id="peh-KV-LJu" sceneMemberID="viewController">
+                <viewController id="peh-KV-LJu" customClass="CreateSoundViewController" customModule="TalkBoy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oxW-cn-eJk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

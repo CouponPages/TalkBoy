@@ -12,6 +12,8 @@
 		D8B8B37C1F5DB06C00373140 /* TalkBoy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B37A1F5DB06C00373140 /* TalkBoy.xcdatamodeld */; };
 		D8B8B37E1F5DB06C00373140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B8B37D1F5DB06C00373140 /* Assets.xcassets */; };
 		D8B8B3811F5DB06C00373140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B8B37F1F5DB06C00373140 /* LaunchScreen.storyboard */; };
+		D8B8B38B1F5DB6AA00373140 /* SoundsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B38A1F5DB6AA00373140 /* SoundsTableViewTableViewController.swift */; };
+		D8B8B38D1F5DB7AA00373140 /* CreateSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B8B38C1F5DB7AA00373140 /* CreateSoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		D8B8B37D1F5DB06C00373140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8B8B3801F5DB06C00373140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8B8B3821F5DB06C00373140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B8B38A1F5DB6AA00373140 /* SoundsTableViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundsTableViewTableViewController.swift; sourceTree = "<group>"; };
+		D8B8B38C1F5DB7AA00373140 /* CreateSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				D8B8B3731F5DB06C00373140 /* AppDelegate.swift */,
+				D8B8B38A1F5DB6AA00373140 /* SoundsTableViewTableViewController.swift */,
+				D8B8B38C1F5DB7AA00373140 /* CreateSoundViewController.swift */,
 				D8B8B3771F5DB06C00373140 /* Main.storyboard */,
 				D8B8B37D1F5DB06C00373140 /* Assets.xcassets */,
 				D8B8B37F1F5DB06C00373140 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B8B37C1F5DB06C00373140 /* TalkBoy.xcdatamodeld in Sources */,
+				D8B8B38B1F5DB6AA00373140 /* SoundsTableViewTableViewController.swift in Sources */,
+				D8B8B38D1F5DB7AA00373140 /* CreateSoundViewController.swift in Sources */,
 				D8B8B3741F5DB06C00373140 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
