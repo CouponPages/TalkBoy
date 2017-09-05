@@ -19,6 +19,7 @@ class CreateSoundViewController: UIViewController {
     
     var audioRecorder : AVAudioRecorder?
     var audioPlayer : AVAudioPlayer?
+    var audioURL : URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +34,16 @@ class CreateSoundViewController: UIViewController {
         // step 2 URL to save audio
         if let BasePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
             let PathComponents = [BasePath, "audio.m4a"]
-            if let AudioUrl = NSURL.fileURL(withPathComponents: PathComponents){
+            if let ThisAudioUrl = NSURL.fileURL(withPathComponents: PathComponents){
                 // step 3 create some settings
+                self.audioURL = ThisAudioUrl
                 var MyAudioSettings : [String:Any] = [:]
                 MyAudioSettings[AVFormatIDKey] = Int(kAudioFormatMPEG4AAC)
                 MyAudioSettings[AVSampleRateKey] = 44100.0
                 MyAudioSettings[AVNumberOfChannelsKey] = 2
                 
                 // step 4 create audio recorder
-                audioRecorder = try? AVAudioRecorder(url: AudioUrl, settings: MyAudioSettings)
+                audioRecorder = try? AVAudioRecorder(url: ThisAudioUrl, settings: MyAudioSettings)
                 audioRecorder?.prepareToRecord()
                 
             }
@@ -73,6 +75,11 @@ class CreateSoundViewController: UIViewController {
     
     
     @IBAction func PlayWasTapped(_ sender: Any) {
+        if let audioURL = self.audioURL{
+            audioPlayer = try? AVAudioPlayer(contentsOf: audioURL)
+            audioPlayer?.play()
+        }
+        
     }
     
     
