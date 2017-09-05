@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 class SoundsTableViewTableViewController: UITableViewController {
 
     var SoundArray : [SoundEntity] = []
+    var MyAudioPlayer : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,7 @@ class SoundsTableViewTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         getSounds()
     }
+
 
     
     func getSounds()
@@ -62,11 +64,18 @@ class SoundsTableViewTableViewController: UITableViewController {
 
         // Configure the cell...
         let sound = SoundArray[indexPath.row]
-        print(sound.audioName)
         cell.textLabel?.text = sound.audioName
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sound = SoundArray[indexPath.row]
+        if let ThisAudio = sound.audioData {
+             MyAudioPlayer = try? AVAudioPlayer(data: ThisAudio)
+            MyAudioPlayer?.play()
+        }
+        
+    }
 
     /*
      override func didReceiveMemoryWarning() {
