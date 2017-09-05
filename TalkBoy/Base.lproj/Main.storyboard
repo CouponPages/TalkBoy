@@ -5,8 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,46 +54,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhm-IK-Xqh">
-                                <rect key="frame" x="15" y="64" width="345" height="30"/>
+                                <rect key="frame" x="15" y="64" width="340" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
                                     <action selector="RecordWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="UZB-6f-HhL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEy-No-RTa">
-                                <rect key="frame" x="15" y="102" width="345" height="30"/>
+                                <rect key="frame" x="15" y="118" width="345" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="PlayWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="XEo-7a-fRf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGu-ve-6OC">
-                                <rect key="frame" x="15" y="123" width="345" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-lK-Fxb">
-                                <rect key="frame" x="15" y="161" width="345" height="30"/>
+                                <rect key="frame" x="15" y="232" width="345" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="AddWasTapped:" destination="peh-KV-LJu" eventType="touchUpInside" id="AMC-th-KAh"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DGu-ve-6OC">
+                                <rect key="frame" x="15" y="174" width="345" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hhm-IK-Xqh" firstAttribute="top" secondItem="Qvu-TA-QHJ" secondAttribute="top" id="2yl-EA-PHR"/>
                             <constraint firstItem="Qvu-TA-QHJ" firstAttribute="trailing" secondItem="RjC-lK-Fxb" secondAttribute="trailing" constant="15" id="9GX-KV-yAc"/>
                             <constraint firstItem="Qvu-TA-QHJ" firstAttribute="trailing" secondItem="aEy-No-RTa" secondAttribute="trailing" constant="15" id="9iY-cS-N6Z"/>
-                            <constraint firstItem="DGu-ve-6OC" firstAttribute="firstBaseline" secondItem="aEy-No-RTa" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="PCd-er-TRE"/>
-                            <constraint firstItem="RjC-lK-Fxb" firstAttribute="top" secondItem="DGu-ve-6OC" secondAttribute="bottom" constant="8" id="XgC-g2-Lsx"/>
-                            <constraint firstItem="aEy-No-RTa" firstAttribute="top" secondItem="Hhm-IK-Xqh" secondAttribute="bottom" constant="8" id="YBA-H0-rdC"/>
+                            <constraint firstItem="DGu-ve-6OC" firstAttribute="top" secondItem="aEy-No-RTa" secondAttribute="bottom" constant="20" id="Ggz-Xq-dMT"/>
+                            <constraint firstItem="RjC-lK-Fxb" firstAttribute="top" secondItem="DGu-ve-6OC" secondAttribute="bottom" constant="28" id="V6N-Wx-rHe"/>
+                            <constraint firstItem="aEy-No-RTa" firstAttribute="top" secondItem="Hhm-IK-Xqh" secondAttribute="bottom" constant="20" id="YBA-H0-rdC"/>
                             <constraint firstItem="Hhm-IK-Xqh" firstAttribute="leading" secondItem="Qvu-TA-QHJ" secondAttribute="leading" constant="15" id="Z7I-9V-utl"/>
                             <constraint firstItem="RjC-lK-Fxb" firstAttribute="leading" secondItem="Qvu-TA-QHJ" secondAttribute="leading" constant="15" id="cXJ-UY-X54"/>
                             <constraint firstItem="Qvu-TA-QHJ" firstAttribute="trailing" secondItem="DGu-ve-6OC" secondAttribute="trailing" constant="15" id="eiH-mc-Y5C"/>
                             <constraint firstItem="aEy-No-RTa" firstAttribute="leading" secondItem="Qvu-TA-QHJ" secondAttribute="leading" constant="15" id="eiK-bH-KBp"/>
-                            <constraint firstItem="Qvu-TA-QHJ" firstAttribute="trailing" secondItem="Hhm-IK-Xqh" secondAttribute="trailing" constant="15" id="fwl-eg-KKg"/>
+                            <constraint firstItem="Qvu-TA-QHJ" firstAttribute="trailing" secondItem="Hhm-IK-Xqh" secondAttribute="trailing" constant="20" id="fwl-eg-KKg"/>
                             <constraint firstItem="DGu-ve-6OC" firstAttribute="leading" secondItem="Qvu-TA-QHJ" secondAttribute="leading" constant="15" id="xzy-Do-oZF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qvu-TA-QHJ"/>
