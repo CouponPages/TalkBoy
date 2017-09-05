@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CreateSoundViewController: UIViewController {
 
@@ -15,6 +16,42 @@ class CreateSoundViewController: UIViewController {
     @IBOutlet weak var PlayButton: UIButton!
     @IBOutlet weak var TitleBox: UITextField!
     @IBOutlet weak var AddButton: UIButton!
+    
+    var audioRecorder : AVAudioRecorder?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // step 1 create audio session
+        let myAudioSession = AVAudioSession.sharedInstance()
+        try? myAudioSession.setCategory(AVAudioSessionCategoryRecord)
+        try? myAudioSession.overrideOutputAudioPort(.speaker)
+        try? myAudioSession.setActive(true)
+        
+        
+        // step 2 URL to save audio
+        if let BasePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first {
+            let PathComponents = [BasePath, "audio.m4a"]
+            if let AudioUrl = NSURL.fileURL(withPathComponents: PathComponents){
+                // step 3 create some settings
+                var MyAudioSettings : [String:Any] = [:]
+                MyAudioSettings[AVFormatIDKey] = Int(kAudioFormatMPEG4AAC)
+                MyAudioSettings[AVSampleRateKey] = 44100.0
+                MyAudioSettings[AVNumberOfChannelsKey] = 2
+                
+                // step 4 create audio recorder
+                audioRecorder = try? AVAudioRecorder(url: AudioUrl, settings: MyAudioSettings)
+                audioRecorder?.prepareToRecord()
+                
+            }
+            
+
+            
+        }
+      
+    }
+    
+    
     
     @IBAction func RecordWasTapped(_ sender: Any) {
     }
@@ -28,11 +65,7 @@ class CreateSoundViewController: UIViewController {
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
