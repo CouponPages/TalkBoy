@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 class SoundsTableViewTableViewController: UITableViewController {
 
+    var SoundArray : [SoundEntity] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,35 +22,66 @@ class SoundsTableViewTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getSounds()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func getSounds()
+    {
+        print("getting sounds")
+        if let myContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+            if let SoundList = try? myContext.fetch(SoundEntity.fetchRequest()) as? [SoundEntity]{
+                if let TheList = SoundList {
+                    SoundArray = TheList
+                    tableView.reloadData()
+                    print(TheList.count)
+                }
+            }
+            
+            
+        }
     }
+    
+
+
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        print("reached number of rows in section")
+        print(SoundArray.count)
+        return SoundArray.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+        let sound = SoundArray[indexPath.row]
+        print(sound.audioName)
+        cell.textLabel?.text = sound.audioName
         return cell
     }
-    */
+ 
 
     /*
+     override func didReceiveMemoryWarning() {
+     super.didReceiveMemoryWarning()
+     // Dispose of any resources that can be recreated.
+     }
+     
+     // MARK: - Table view data source
+     
+     override func numberOfSections(in tableView: UITableView) -> Int {
+     // #warning Incomplete implementation, return the number of sections
+     return 0
+     }
+
+     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
