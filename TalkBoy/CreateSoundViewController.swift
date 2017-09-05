@@ -24,6 +24,11 @@ class CreateSoundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PlayButton.isEnabled = false
+        TitleBox.isEnabled = false
+        AddButton.isEnabled = false
+        
+        
         // step 1 create audio session
         let myAudioSession = AVAudioSession.sharedInstance()
         try? myAudioSession.setCategory(AVAudioSessionCategoryRecord)
@@ -61,6 +66,11 @@ class CreateSoundViewController: UIViewController {
             if audioRecorder.isRecording{
                 audioRecorder.stop()
                 RecordButton.setTitle("Record", for: .normal)
+                PlayButton.isEnabled = true
+                TitleBox.isEnabled = true
+                AddButton.isEnabled = true
+
+                
             }
             else
             {
