@@ -18,6 +18,7 @@ class CreateSoundViewController: UIViewController {
     @IBOutlet weak var AddButton: UIButton!
     
     var audioRecorder : AVAudioRecorder?
+    var audioPlayer : AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
