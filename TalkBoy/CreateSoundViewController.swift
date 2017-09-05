@@ -54,6 +54,20 @@ class CreateSoundViewController: UIViewController {
     
     
     @IBAction func RecordWasTapped(_ sender: Any) {
+        if let audioRecorder = self.audioRecorder {
+            if audioRecorder.isRecording{
+                audioRecorder.stop()
+                RecordButton.setTitle("Record", for: .normal)
+            }
+            else
+            {
+                audioRecorder.record()
+                RecordButton.setTitle("Stop", for: .normal)
+
+            }
+
+        }
+        
     }
     
     
