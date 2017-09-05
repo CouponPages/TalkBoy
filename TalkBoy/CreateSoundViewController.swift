@@ -74,6 +74,10 @@ class CreateSoundViewController: UIViewController {
             }
             else
             {
+                PlayButton.isEnabled = false
+                TitleBox.isEnabled = false
+                AddButton.isEnabled = true
+
                 audioRecorder.record()
                 RecordButton.setTitle("Stop", for: .normal)
 
@@ -94,6 +98,16 @@ class CreateSoundViewController: UIViewController {
     
     
     @IBAction func AddWasTapped(_ sender: Any) {
+        if let myContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+             let MySound = SoundEntity(entity: SoundEntity.entity(), insertInto: myContext)
+            MySound.audioName = TitleBox.text
+            if let audioURL = self.audioURL{
+                MySound.audioData = try? Data(contentsOf: audioURL)
+                try? myContext.save()
+                navigationController?.popViewController(animated: true)
+            }
+        }
+        
     }
     
     
